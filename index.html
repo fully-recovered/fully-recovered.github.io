@@ -51,22 +51,23 @@
     ul.social-icons {
       list-style-type: none;
       display: flex;
-      flex-wrap: nowrap;
       margin: auto;
       padding: 0;
-      width: 540px;
+      justify-content: center;
     }
 
     ul.social-icons li {
-      display: inline-block;
       flex-shrink: 1;
-      width: 100px;
-      height: 100px;
+      flex-basis: 100px;
       border-radius: 50%;
       background-color: #222;
       position: relative;
-      padding: 2px;
-      margin: 0;
+    }
+
+    ul.social-icons li:before {
+      content: "";
+      display: inline-block;
+      padding-top: 100%;
     }
 
     ul.social-icons li svg {
@@ -76,6 +77,8 @@
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
+      max-width: 60%;
+      height: auto;
     }
   </style>
 </head>
